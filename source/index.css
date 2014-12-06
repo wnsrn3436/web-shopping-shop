@@ -1,0 +1,180 @@
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+body {
+	background: #FFFFFF;
+}
+
+#wrap {
+	width: 1280px;
+	height: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#wrap > #top {
+	position: fixed;
+	background: #FFFFFF;
+	z-index: 1000000;
+}
+
+#wrap > #top > #title > a {
+	width: 1280px;
+	height: 100px;
+}
+
+#wrap > #top > #title > a > img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#wrap > #top > #menu {
+	width: 1280px;
+	height: 40px;
+}
+
+#wrap > #top > #menu > ul {
+	margin-left: 0px;
+	margin-right: 33px;
+}
+
+#wrap > #top > #menu > ul > li {
+	float: left;
+	padding: 59px 0px 0px 150px;
+	color: #000000;
+	list-style: none;
+	font-family: "Verdana";
+	border-bottom: 2px solid #1E2327;
+}
+
+#wrap > #top > #menu > ul > li a {
+	color: #000000;
+	text-decoration: none;
+}
+
+#wrap > #top > #menu > ul > li.on a {
+	color: #000FFF;
+	font-weight: bold;
+}
+
+#wrap > #contents > div {
+	padding-top: 220px;
+}
+
+#wrap > #contents > #main {
+	width: 1280px;
+	height: 1000px;
+}
+
+#wrap > #contents > #main > #mainimage {
+	width: 1280px;
+	height: 470px;
+	background-image: url("image/main_01.jpg");
+}
+
+#wrap > #contents > #main > #mainbutton > a > img {
+	margin-top: 50px;
+	position: absolute;
+}
+
+#wrap > #contents > #main > #mainbutton > a > #mainnext {
+	left: 1550px;
+}
+
+#wrap > #contents > #main > #mainbutton > #mainsubimage > a > img {
+	margin-top: 30px;
+	width: 300px;
+}
+
+#wrap > #contents > #main > #mainbutton > #mainsubimage > a {
+	padding-left: 90px;
+}
+
+#wrap > #contents > #shop {
+	width: 1280px;
+	height: 1000px;
+}
+
+#wrap > #contents > #webtoon {
+	width: 1280px;
+	height: 1000px;
+}
+
+#wrap > #contents > #webtoon > iframe {
+	width: 1280px;
+	height: 620px;
+}
+
+#parallax .obj01 {
+	left: 5%;
+	top: 0px;
+	width: 256px;
+	height: 161px;
+	background: url(./image/parallax_01.png) no-repeat left top;
+	z-index: 300;
+	position: absolute;
+	opacity: 0.5;
+}
+#parallax .obj02 {
+	left: 90%;
+	top: 363px;
+	width: 104px;
+	height: 67px;
+	background: url(./image/parallax_02.png) no-repeat left top;
+	z-index: 300;
+	position: absolute;
+	opacity: 0.5;
+}
+#parallax .obj03 {
+	left: 80%;
+	top: 452px;
+	width: 104px;
+	height: 67px;
+	background: url(./image/parallax_03.png) no-repeat left top;
+	z-index: 300;
+	position: absolute;
+	opacity: 0.5;
+}
+#parallax .obj04 {
+	left: 90%;
+	top: 750px;
+	width: 54px;
+	height: 67px;
+	background: url(./image/parallax_01.png) no-repeat left top;
+	z-index: 300;
+	position: absolute;
+	opacity: 0.5;
+}
+#parallax .obj05 {
+	left: 10%;
+	top: 800px;
+	width: 100px;
+	height: 67px;
+	background: url(./image/parallax_06.png) no-repeat left top;
+	z-index: 300;
+	position: absolute;
+	opacity: 0.5;
+}
+#parallax .obj06 {
+	left: 85%;
+	top: 389px;
+	width: 405px;
+	height: 315px;
+	background: url(./image/parallax_06.png) no-repeat left top;
+	z-index: 300;
+	position: absolute;
+	opacity: 0.5;
+}
+#parallax .obj07 {
+	left: 1%;
+	top: 855px;
+	width: 200px;
+	height: 315px;
+	background: url(./image/parallax_07.png) no-repeat left top;
+	z-index: 300;
+	position: absolute;
+	opacity: 0.5;
+}

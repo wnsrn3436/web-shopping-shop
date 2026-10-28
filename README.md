@@ -1,6 +1,8 @@
 # Shopping Shop
 
-A one-page website themed as a clothing shop. A menu fixed at the top moves between the Main, Shop and WebToons sections, and the site has a main banner that advances on its own, a product gallery that spreads out as you scroll, and background decorations that move at different speeds with the scroll, all made with HTML, CSS and jQuery. A school assignment made by a team of 3.
+[한국어](README.ko.md)
+
+This is a one-page website themed around a clothing shop. A menu fixed at the top moves between three sections: Main, Shop and WebToons. The main banner advances on its own, the product gallery spreads out as you scroll, and the background decorations move at different speeds as the page scrolls. It is a school assignment made by a team of 3 with HTML, CSS and jQuery.
 
 <p>
   <img src="docs/screenshots/screenshot-1.jpg" width="480" alt="Shop section">
@@ -9,7 +11,7 @@ A one-page website themed as a clothing shop. A menu fixed at the top moves betw
 
 ## How to use
 
-Download from Releases, extract it and open `index.html` in a web browser. The layout has a fixed width made for a 1280 pixel wide screen.
+Download the archive from Releases, extract it and open `index.html` in a web browser. It is a fixed-width layout sized for a screen 1280 pixels wide.
 
 | Section | Content |
 |---|---|
@@ -20,13 +22,13 @@ Download from Releases, extract it and open `index.html` in a web browser. The l
 
 ## How it works
 
-**The menu and the scroll position follow each other.** Clicking a menu item animates `scrollTop` to the section with the same index, so the page scrolls there smoothly. In the other direction, every scroll goes through the sections in order to find the ones whose top has passed the top of the screen, and the menu item with the matching index gets the `on` class.
+**The menu and the scroll position stay in sync.** Clicking a menu item animates `scrollTop` to the position of the section with the same index, so the page scrolls down smoothly. In the other direction, each scroll checks the sections in order to find the one whose top has passed the top of the screen, and the menu item with that index gets the `on` class so it is highlighted.
 
-**The main banner changes its background image.** Each change runs a 0.5 second `fadeOut` on the banner, swaps `background-image` to the next picture and runs `fadeIn` again. Only the thumbnail of the current picture has an opacity of 1, and the rest are at 0.5. The 4 second timer restarts whenever the banner is changed by hand.
+**The main banner advances by swapping its background image.** Each change runs a 0.5-second `fadeOut` on the banner, swaps `background-image` to the next picture and runs `fadeIn` again. Only the thumbnail of the current picture has an opacity of 1, and the rest are at 0.5. The 4-second timer restarts whenever someone changes the banner by hand.
 
-**The product gallery is built when the section is reached.** When the Shop section reaches the top of the screen, a large photo and six thumbnails are added on the spot. Each thumbnail moves to a spot offset by 30 pixels per index, with later ones taking 0.2 seconds longer each, so they spread out in an overlapping diagonal. The large photo is as wide as the window minus 380 pixels, up to 850 pixels. Leaving the section removes them all, and resizing the window rebuilds them.
+**The product gallery is built when you reach the section.** When the Shop section reaches the top of the screen, a large photo and six thumbnails are added on the spot. Each thumbnail moves to a position offset by 30 pixels per index, and each later one takes 0.2 seconds longer, so they fan out diagonally and overlap. The large photo is as wide as the window minus 380 pixels, up to 850 pixels. Leaving the section removes them all, and resizing the window rebuilds them.
 
-**The background decorations move at a different rate per index.** Every scroll sets the `top` of the six decoration images again. The distance scrolled inside the current section is multiplied by 2 and divided by the index before being added, so later images move less and the page gains depth.
+**The background decorations move at a different rate per index.** On every scroll, the `top` of each of the six decoration images is set again. The distance scrolled inside the current section is multiplied by 2, divided by the index and then added, so later images move less and the page gets a sense of depth.
 
 ```js
 parallax.each(function (i){
@@ -37,7 +39,7 @@ parallax.each(function (i){
 });
 ```
 
-**The WebToons section shows a separate page in an `iframe`.** The two-level menu in `webpagemaking/webpagemake.html` opens when the mouse is over a top item, by growing the menu area's height to include the submenu. The sliding banner changes pictures by moving the current one out to the left while the next one comes in from the right, and hovering a dot below jumps to that picture. Left alone, it advances by itself.
+**The WebToons section shows a separate page in an `iframe`.** When the mouse is over a top menu item, the two-level menu in `webpagemaking/webpagemake.html` opens by growing the menu area's height to include the submenu. The sliding banner moves the current picture out to the left while the next one slides in from the right into place, and hovering a dot button below jumps to that picture. Left alone, it advances by itself.
 
 
 ## Files
@@ -50,7 +52,7 @@ parallax.each(function (i){
 | `source/responsive.js` | Product gallery |
 | `source/parallax.js` | Background decorations |
 | `source/image/` | Banner, product and decoration images |
-| `source/webpagemaking/` | The two-level menu and sliding banner page of the WebToons section |
+| `source/webpagemaking/` | Page with the WebToons section's two-level menu and sliding banner |
 | `docs/screenshots/` | Screenshots |
 | Releases | The whole site |
 
